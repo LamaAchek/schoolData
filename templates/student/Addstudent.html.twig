@@ -1,0 +1,37 @@
+{% extends "./base.html.twig" %}
+
+{% block body %}
+<div class="w-4/5 m-auto pt-40">
+    <h3 class="text-6xl  pb-12">
+        add a student
+    </h3>
+
+    {{ form_start(add_student) }}
+
+
+        {{ form_widget(add_student) }}
+        
+        <br><br>
+
+        <button    
+            type="submit"
+                class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+            Add
+        </button>
+
+
+    
+            <a 
+                href="/students" 
+                class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                see all students
+            </a>
+
+
+            
+        
+
+
+    {{ form_end(add_student) }}
+</div>
+{% endblock %}

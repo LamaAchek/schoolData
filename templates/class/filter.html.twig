@@ -1,0 +1,20 @@
+{% extends "./base.html.twig" %}
+
+
+{% block body %}
+    <div>
+
+<form method="GET" action="{{ path('filter_classes') }}">
+    <input type="text" name="query" placeholder="Search Query...">
+
+    <select name="name">
+    {% for class in classes%}
+        <option value="{{class.name}}" >{{class.name}}</option>
+     {% endfor %}
+    </select>
+    
+    <input type="submit" class="btn btn-warning" value="Find">
+
+</form>
+</div>
+{% endblock %}

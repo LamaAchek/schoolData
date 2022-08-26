@@ -1,0 +1,34 @@
+{% extends "./base.html.twig" %}
+
+{% block body %}
+    <div class="sm:w-3/5 w-4/5 mx-auto">
+        <h1 class="pt-20 sm:text-5xl md:text-7xl text-4xl font-bold text-center">
+            {{ classes.getName() }}
+            
+        </h1>
+
+        <p> Section: {{ classes.getSection() }} </p>
+
+    </div>
+
+    <br><br>
+        <div class="mx-auto w-4/5 my-8">
+            <a 
+                href="/classess/delete/{{ classes.getId() }}"
+                class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                delete classes
+            </a>
+    
+            <a 
+                href="/classess/edit/{{ classes.getId() }}"
+                class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                edit classes
+            </a>
+
+            <a 
+                href="/classess"
+                class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                see all classess
+            </a>
+        </div>
+{% endblock %}
